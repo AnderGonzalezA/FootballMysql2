@@ -14,7 +14,8 @@
 			Conn conn = new Conn();
 
 			if (request.getParameter("update") != null) {
-				conn.updateTeam(request.getParameter("old_name"),request.getParameter("new_name"), request.getParameter("coach"));
+				conn.updateTeam(request.getParameter("old_name"), request.getParameter("new_name"),
+						request.getParameter("coach"));
 			}
 
 			if (request.getParameter("insert") != null) {

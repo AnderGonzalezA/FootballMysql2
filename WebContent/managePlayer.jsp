@@ -29,9 +29,9 @@
 	}
 	if (request.getParameter("delete") != null) {
 		conn.deletePlayer(request.getParameter("old_name"));
-		String site = new String("players.jsp");
-		response.setStatus(response.SC_MOVED_TEMPORARILY);
-		response.setHeader("Location", site);
+		//response.setStatus(response.SC_MOVED_TEMPORARILY);
+		//response.setHeader("Location", "players.jsp");
+		response.sendRedirect("players.jsp");
 	}
 	if (request.getParameter("insert") != null) {
 		text = "<title>Insert a player</title></head><body><h1>Insert a player</h1><form action='players.jsp' method='POST'>"
